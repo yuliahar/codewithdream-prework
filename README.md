@@ -3,6 +3,7 @@
 _Description_
 
 **The project fetches data from [Spotify](https://beta.developer.spotify.com/documentation/web-api/), a music API that requires a free Spotify account and use of an access token.
+
 **Technologies used include: vanilla JavaScript, HTML, CSS.
 
 ## Demo
@@ -24,8 +25,11 @@ The site is live and can be viewed at https://codewithdream-spotify-prework.netl
 ### Models used
 
 _**Albums Model**_ - GET New Releases ([API Reference](https://developer.spotify.com/documentation/web-api/reference/get-new-releases)): Retrieves a list of new album releases featured on Spotify.
+
 _**Album Details**_ - GET an Album ([API Reference](https://developer.spotify.com/documentation/web-api/reference/get-an-album)): Retrieves Spotify catalog information for a single album.
+
 _**Search Artists Model**_ - [API Reference](https://developer.spotify.com/documentation/web-api/reference/search): Retrieves Spotify catalog information about albums, artists, playlists, tracks, shows, episodes, or audiobooks that match a keyword string.
+
 _**Artists Model**_ - GET an Artist ([API Reference](https://developer.spotify.com/documentation/web-api/reference/get-an-artist)): Retrieves Spotify catalog information for an artist.
 
 ### Functionality
