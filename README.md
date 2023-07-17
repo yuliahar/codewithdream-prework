@@ -40,3 +40,10 @@ _**Artists Model**_ - GET an Artist ([API Reference](https://developer.spotify.c
 - Each artist is clickable and can be opened by clicking the artist's image or name.
 
 ![Alt text](image.png)
+
+### Future improvements
+
+- Move sensitive information to a .env file and use dotenv to access it.
+- Move the API call to a server-side script to hide the access token.
+- Add a search bar to search for albums and artists.
+- Add a feature to play a preview of the album.
