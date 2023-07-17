@@ -1,5 +1,5 @@
-const clientId = '19f57a58174c455eb28c19b2967b8700';
-const clientSecret = '3966421766fd4e5db8701508e6b15c64';
+const clientId = CONFIG.clientId;
+const clientSecret = CONFIG.clientSecret;
 
 async function getAccessToken() {
   try {
@@ -60,7 +60,6 @@ async function renderAlbums(count = 20) {
     container.appendChild(card);
   }
 }
-
 async function getAlbumDetails() {
   const urlParams = new URLSearchParams(window.location.search);
   const id = urlParams.get('id');
@@ -131,7 +130,6 @@ async function renderArtists() {
     container.appendChild(card);
   }
 }
-
 async function getArtistDetails() {
   const urlParams = new URLSearchParams(window.location.search);
   const id = urlParams.get('id');
@@ -165,25 +163,22 @@ async function getArtistDetails() {
   }
 }
 
-window.onload = function () {
-  switch (window.location.pathname) {
-    case "/index.html":
-      renderAlbums(6);
-      break;
-    case "/albums.html":
-      renderAlbums();
-      break;
-    case "/album.html":
-      getAlbumDetails();
-      break;
-    case "/artists.html":
-      renderArtists();
-      break;
-    case "/artist.html":
-      getArtistDetails();
-      break;
-    default:
-      break;
-  }
-};
-
+switch (window.location.pathname) {
+  case "/index.html":
+    renderAlbums(6);
+    break;
+  case "/albums.html":
+    renderAlbums();
+    break;
+  case "/album.html":
+    getAlbumDetails();
+    break;
+  case "/artists.html":
+    renderArtists();
+    break;
+  case "/artist.html":
+    getArtistDetails();
+    break;
+  default:
+    break;
+}
