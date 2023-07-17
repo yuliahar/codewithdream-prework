@@ -1,0 +1,187 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Georgia", sans-serif;
+	font-size: 1.5em;
+	color: #ffffff;
+	background-color: #e5e5e5;
+	margin: 0;
+}
+
+nav {
+	background-color: #1db954;
+	height: 60px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.nav-links {
+	display: flex;
+	justify-content: space-around;
+	width: 30%;
+}
+
+.nav-links li {
+	list-style: none;
+}
+
+.nav-links a {
+	color: #1ed760;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.nav-links a.active {
+	color: #ffffff; /* A light Spotify green color for the active page */
+}
+
+.content-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+
+.wrapper {
+	max-width: 1280px;
+	margin: auto;
+}
+
+.button {
+	background-color: #1db954; /* Spotify green */
+	color: #ffffff; /* White */
+	border: none;
+	border-radius: 50px;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 18px;
+	margin: 30px 2px 10px;
+	cursor: pointer;
+	transition-duration: 0.4s;
+}
+
+.button:hover {
+	background-color: #1ed760; /* Slightly lighter Spotify green */
+	color: black;
+}
+
+.albums .albums__wrapper {
+	background-color: #f6f6f6;
+	padding: 50px 0px 50px 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.albums .albums__wrapper .albums__title {
+	color: #191414;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 40px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 25px;
+	letter-spacing: 0.06em;
+}
+
+.albums .albums__wrapper .albums__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.albums .albums__wrapper .albums__list .albums__card {
+	width: 30%;
+	margin-bottom: 40px;
+	margin: 20px;
+	text-align: center;
+
+	.albums_card__link {
+		text-decoration: none;
+	}
+}
+
+.albums .albums__wrapper .albums__list .albums__card .albums__card__image {
+	width: 100%;
+	height: 100%;
+}
+
+.albums .albums__wrapper .albums__list .albums__card .albums__card__image img {
+	width: 100%;
+	height: 100%;
+}
+
+.albums .albums__wrapper .albums__list .albums__card .albums__card__title {
+	color: #191414;
+	margin-top: 20px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	letter-spacing: 0.06em;
+}
+
+/* Album Details */
+#album-details .album-details__wrapper {
+	background-color: #ffffff;
+	color: #191414;
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 72%;
+		margin: auto;
+		padding: 40px;
+
+		.album__image {
+			width: 100%;
+			max-width: 400px;
+			height: auto;
+		}
+
+		.album__content {
+			padding-left: 120px;
+			width: 430px;
+
+			.album__name {
+				color: #545454;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 25px;
+				line-height: 130%;
+				letter-spacing: 0.06em;
+				margin-bottom: 25px;
+				max-width: 370px;
+			}
+
+			.about__text {
+				font-family: "Arial", sans-serif;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 15px;
+				line-height: 160%;
+				max-width: 460px;
+			}
+
+			.album__artists,
+			.album__release_date,
+			.album__total_tracks {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
