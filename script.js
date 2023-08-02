@@ -33,7 +33,7 @@ async function getNewReleases(count) {
       redirect: 'follow'
     };
 
-    let res = await await fetch(`https://api.spotify.com/v1/browse/new-releases?country=US&offset=0&limit=${count}`, requestOptions);
+    let res = await fetch(`https://api.spotify.com/v1/browse/new-releases?country=US&offset=0&limit=${count}`, requestOptions);
     const data = await res.json();
     const albums = data.albums.items;
     return albums;
