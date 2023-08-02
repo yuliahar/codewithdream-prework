@@ -163,22 +163,14 @@ async function getArtistDetails() {
   }
 }
 
-switch (window.location.pathname) {
-  case "/index.html":
-    renderAlbums(6);
-    break;
-  case "/albums.html":
-    renderAlbums();
-    break;
-  case "/album.html":
-    getAlbumDetails();
-    break;
-  case "/artists.html":
-    renderArtists();
-    break;
-  case "/artist.html":
-    getArtistDetails();
-    break;
-  default:
-    break;
+if (window.location.pathname === "index.html" || window.location.pathname === "/") {
+  renderAlbums(6);
+} else if (window.location.pathname.includes("albums")) {
+  renderAlbums();
+} else if (window.location.pathname.includes("album")) {
+  getAlbumDetails();
+} else if (window.location.pathname.includes("artists")) {
+  renderArtists();
+} else if (window.location.pathname.includes("artist")) {
+  getArtistDetails();
 }
